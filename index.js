@@ -5,7 +5,7 @@ const puppeteer = require('puppeteer');
 
 app.get('/',async (req, res) => {
     const browser = await puppeteer.launch(   {
-        headless: false
+        headless: true
     });
     const page = await browser.newPage();
     await page.goto(req.query.url);
